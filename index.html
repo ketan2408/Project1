@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive resume form for creating and downloading a PDF resume.">
+    <title>Interactive Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Resume</h1>
+        <p>Fill out the form below and generate a PDF of your resume.</p>
+        <nav role="navigation">
+            <ul>
+                <li><a href="#form" role="link" aria-label="Resume Form">Resume Form</a></li>
+                <li><a href="#preview" role="link" aria-label="Resume Preview">Resume Preview</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="form" class="container">
+        <h2>Resume Form</h2>
+        <form id="resume-form">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="intro">Brief Introduction:</label>
+                <textarea id="intro" name="intro" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Education</legend>
+                <div id="education-fields">
+                    <div class="education-item">
+                        <label for="edu-university">University Name:</label>
+                        <input type="text" class="edu-university" name="edu-university">
+
+                        <label for="edu-degree">Degree:</label>
+                        <input type="text" class="edu-degree" name="edu-degree">
+
+                        <label for="edu-year">Graduation Year:</label>
+                        <input type="text" class="edu-year" name="edu-year">
+
+                        <label for="edu-description">Description:</label>
+                        <textarea class="edu-description" name="edu-description"></textarea>
+                    </div>
+                </div>
+                <button type="button" id="add-education">Add Another Education</button>
+            </fieldset>
+
+            <fieldset>
+                <legend>Work Experience</legend>
+                <div id="experience-fields">
+                    <div class="experience-item">
+                        <label for="job-title">Job Title:</label>
+                        <input type="text" class="job-title" name="job-title">
+
+                        <label for="job-company">Company Name:</label>
+                        <input type="text" class="job-company" name="job-company">
+
+                        <label for="job-duration">Duration:</label>
+                        <input type="text" class="job-duration" name="job-duration">
+
+                        <label for="job-description">Description:</label>
+                        <textarea class="job-description" name="job-description"></textarea>
+                    </div>
+                </div>
+                <button type="button" id="add-experience">Add Another Experience</button>
+            </fieldset>
+
+            <fieldset>
+                <legend>Skills</legend>
+                <textarea id="skills" name="skills" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Projects</legend>
+                <div id="projects-fields">
+                    <div class="project-item">
+                        <label for="project-title">Project Title:</label>
+                        <input type="text" class="project-title" name="project-title">
+
+                        <label for="project-description">Description:</label>
+                        <textarea class="project-description" name="project-description"></textarea>
+                    </div>
+                </div>
+                <button type="button" id="add-project">Add Another Project</button>
+            </fieldset>
+
+            <button type="submit">Generate PDF</button>
+        </form>
+    </section>
+
+    <section id="preview" class="container">
+        <h2>Resume Preview</h2>
+        <div id="resume-preview">
+            <!-- Resume preview will be generated here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Your Name</p>
+    </footer>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>More Information</h2>
+            <p id="modal-text">Here will be additional details or tips.</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
