@@ -20,7 +20,7 @@ This project provides an interactive web form for creating and downloading a PDF
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/ketan2408/interactive-resume.git
+    git clone https://github.com/ketan2408/Project1.git
     ```
 
 2. **Navigate to the Project Directory**:
