@@ -25,7 +25,7 @@ This project provides an interactive web form for creating and downloading a PDF
 
 2. **Navigate to the Project Directory**:
     ```bash
-    cd interactive-resume
+    cd Project1
     ```
 
 3. **Open the `index.html` File**:
